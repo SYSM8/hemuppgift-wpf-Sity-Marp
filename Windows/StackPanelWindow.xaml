@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfAssignment.StackPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAssignment"
+        mc:Ignorable="d"
+        Title="StackPanelWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/> <!-- Radio button -->
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+
+        <StackPanel Orientation="Horizontal">
+                 <RadioButton x:Name="VerticalBtn" GroupName="Alignment" Content="Vertical" Click="VerticalBtn_Click"/>
+                 <RadioButton x:Name="HorizontalBtn" GroupName="Alignment" Content="Horizontal" IsChecked="True" Click="HorizontalBtn_Click" />
+        </StackPanel>
+
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <StackPanel x:Name="RectangleStackPanel" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Rectangle Fill="red" Width="100" Height="100" Margin="5"/>
+                <Rectangle Fill="Orange" Width="90" Height="90" Margin="5"/>
+                <Rectangle Fill="Yellow" Width="80" Height="80" Margin="5"/>
+                <Rectangle Fill="LightGreen" Width="70" Height="70" Margin="5"/>
+                <Rectangle Fill="Green" Width="60" Height="60" Margin="5"/>
+                <Rectangle Fill="LightBlue" Width="50" Height="50" Margin="5"/>
+                <Rectangle Fill="Blue" Width="40" Height="40" Margin="5"/>
+                <Rectangle Fill="Black" Width="30" Height="30" Margin="5"/>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Window>
